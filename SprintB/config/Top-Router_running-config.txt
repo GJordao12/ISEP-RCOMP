@@ -1,0 +1,183 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Top-Router
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX1017JDKN-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.1
+ encapsulation dot1Q 321
+ ip address 10.126.101.65 255.255.255.192
+!
+interface FastEthernet0/0.2
+ encapsulation dot1Q 322
+ ip address 10.126.102.1 255.255.255.192
+!
+interface FastEthernet0/0.3
+ encapsulation dot1Q 323
+ ip address 10.126.102.225 255.255.255.224
+!
+interface FastEthernet0/0.4
+ encapsulation dot1Q 324
+ ip address 10.126.99.1 255.255.255.128
+!
+interface FastEthernet0/0.5
+ encapsulation dot1Q 325
+ ip address 10.126.103.1 255.255.255.224
+!
+interface FastEthernet0/0.6
+ encapsulation dot1Q 336
+ ip address 10.126.101.193 255.255.255.192
+!
+interface FastEthernet0/0.7
+ encapsulation dot1Q 337
+ ip address 10.126.100.193 255.255.255.192
+!
+interface FastEthernet0/0.8
+ encapsulation dot1Q 338
+ ip address 10.126.100.129 255.255.255.192
+!
+interface FastEthernet0/0.9
+ encapsulation dot1Q 339
+ ip address 10.126.97.1 255.255.255.0
+!
+interface FastEthernet0/0.10
+ encapsulation dot1Q 340
+ ip address 10.126.102.193 255.255.255.224
+!
+interface FastEthernet0/0.11
+ encapsulation dot1Q 331
+ ip address 10.126.101.2 255.255.255.192
+!
+interface FastEthernet0/0.12
+ encapsulation dot1Q 332
+ ip address 10.126.102.69 255.255.255.192
+!
+interface FastEthernet0/0.13
+ encapsulation dot1Q 333
+ ip address 10.126.100.67 255.255.255.192
+!
+interface FastEthernet0/0.14
+ encapsulation dot1Q 334
+ ip address 10.126.96.2 255.255.255.0
+!
+interface FastEthernet0/0.15
+ encapsulation dot1Q 335
+ ip address 10.126.101.129 255.255.255.192
+!
+interface FastEthernet0/0.16
+ encapsulation dot1Q 326
+ ip address 10.126.100.1 255.255.255.192
+!
+interface FastEthernet0/0.17
+ encapsulation dot1Q 327
+ ip address 10.126.99.129 255.255.255.128
+!
+interface FastEthernet0/0.18
+ encapsulation dot1Q 328
+ ip address 10.126.98.129 255.255.255.128
+!
+interface FastEthernet0/0.19
+ encapsulation dot1Q 329
+ ip address 10.126.103.33 255.255.255.240
+!
+interface FastEthernet0/0.20
+ encapsulation dot1Q 330
+ ip address 10.126.102.129 255.255.255.192
+!
+interface FastEthernet0/0.21
+ encapsulation dot1Q 320
+ ip address 10.126.98.5 255.255.255.128
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+!
+ip classless
+ip route 10.126.101.64 255.255.255.192 10.126.98.1 
+ip route 10.126.102.0 255.255.255.192 10.126.98.1 
+ip route 10.126.102.224 255.255.255.224 10.126.98.1 
+ip route 10.126.99.0 255.255.255.128 10.126.98.1 
+ip route 10.126.103.0 255.255.255.224 10.126.98.1 
+ip route 10.126.98.128 255.255.255.128 10.126.98.2 
+ip route 10.126.99.128 255.255.255.128 10.126.98.2 
+ip route 10.126.100.0 255.255.255.192 10.126.98.2 
+ip route 10.126.103.32 255.255.255.240 10.126.98.2 
+ip route 10.126.102.128 255.255.255.192 10.126.98.2 
+ip route 10.126.96.0 255.255.255.0 10.126.98.3 
+ip route 10.126.100.64 255.255.255.192 10.126.98.3 
+ip route 10.126.101.0 255.255.255.192 10.126.98.3 
+ip route 10.126.102.64 255.255.255.192 10.126.98.3 
+ip route 10.126.101.128 255.255.255.192 10.126.98.3 
+ip route 10.126.101.192 255.255.255.192 10.126.98.4 
+ip route 10.126.100.192 255.255.255.192 10.126.98.4 
+ip route 10.126.100.128 255.255.255.192 10.126.98.4 
+ip route 10.126.97.0 255.255.255.0 10.126.98.4 
+ip route 10.126.102.192 255.255.255.224 10.126.98.4 
+ip route 0.0.0.0 0.0.0.0 10.126.98.6 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

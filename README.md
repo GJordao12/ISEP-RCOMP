@@ -1,4 +1,4 @@
-# ISEP - RCOMP (2º ANO - 2º SEMESTRE)
-* Linguagem: -
-* Projetos e Trabalhos de RCOMP da Universidade
-* Ano: 2021
+# ISEP - RCOMP (2º YEAR - 2º SEMESTER)
+* Language: -
+* University RCOMP Projects and Works
+* Year: 2021
